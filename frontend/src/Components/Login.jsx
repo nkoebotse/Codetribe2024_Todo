@@ -11,21 +11,17 @@ const AdminLogin = () => {
     setError('');
 
     try {
-     
-      const response = await axios.get(`http://localhost:5000/users?email=${email}&password=${password}`);
+      const response = await axios.get(`http://localhost:5000/api/login?email=${email}&password=${password}`);
 
-      if (response.data.length === 0) {
+      if (response.data) {
+        const user = response.data;
+        localStorage.setItem('user', JSON.stringify(user));
+        window.location.href = '/Todo';
+      } else {
         throw new Error('Invalid email or password');
       }
-
-      
-      const user = response.data[0];
-      localStorage.setItem('user', JSON.stringify(user));
-
-      
-      window.location.href = '/employee';
     } catch (error) {
-      setError(error.message);
+      setError(error.response ? error.response.data.error : error.message);
     }
   };
 
