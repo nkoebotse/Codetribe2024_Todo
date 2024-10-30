@@ -48,3 +48,5 @@ Run the development server:
 npm run dev
 npm start server
 Open your browser and navigate to http://localhost:3000 (or the port specified in your setup) to view the application.
+![Todo](https://github.com/user-attachments/assets/ca719238-eb8b-41b6-b83e-cf6763ee00e8)
+![login](https://github.com/user-attachments/assets/a4f1f4f3-4f52-437b-b53d-fd76655fcd62)
