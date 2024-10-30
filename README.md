@@ -41,10 +41,10 @@ A simple and responsive To-Do List Application built with user authentication, C
 
 1. Clone the repository.
 2. Install the necessary dependencies:
-   ```bash
+   
    npm install
 Run the development server:
-bash
-Copy code
+
 npm run dev
+npm start server
 Open your browser and navigate to http://localhost:3000 (or the port specified in your setup) to view the application.
